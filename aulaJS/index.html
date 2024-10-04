@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let escola = { nome: "IFSP", localizacao: "Araraquara" }
+
+    let escola2 = {}
+
+        Object.assign(escola2, escola)
+
+let pessoa = { nome: "Igor", idade: 22, peso: 74, formacao: escola }
+console.log(`O ${pessoa.nome} tem ${pessoa.idade} anos e pesa ${pessoa.peso}kg, estuda no ${pessoa.formacao.nome} em ${pessoa.formacao.localizacao}\n`)
+
+let pessoa2 = { nome: "Marcos", idade: 19, peso: 74, formacao: escola }
+
+let pessoa3 = { nome: "Cauan", idade: 19, peso: 77, formacao: escola }
+
+let pessoas = [pessoa, pessoa2, pessoa3]
+
+    for (let i = 0; i < pessoas.length; i++){
+    console.log(`O ${pessoas[i].nome} tem ${pessoas[i].idade} anos e pesa ${pessoas[i].peso}kg, estuda no ${pessoas[i].formacao.nome} em ${pessoa.formacao.localizacao}`)
+    }
+
+    console.log("For of");
+
+    for(let p of pessoas){
+        console.log(`O ${p.nome} tem ${p.idade} anos e pesa ${p.peso}kg, estuda no ${p.formacao.nome} em ${p.formacao.localizacao}`)
+    }
+
+    console.log("For in")
+
+    for(let key in pessoas){
+        console.log(`Chave ${key} -  Valor ${pessoa[key]}`)
+    }
+
+
+    </script>
+</body>
+</html>
